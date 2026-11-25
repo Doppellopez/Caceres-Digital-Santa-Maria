@@ -1,0 +1,27 @@
+{
+  "planta_sin_cubrir_pct": {
+    "antes": 8.18,
+    "despues": 0.36
+  },
+  "contorno_antihorario": true,
+  "torre": {
+    "cota": 27.77,
+    "esquina_interior_supuesta": [
+      16.39,
+      -7.92,
+      27.77
+    ]
+  },
+  "cota_cuerpo_portada": 12.54,
+  "cota_cuerpo_escalonado": 10.22,
+  "cotas_no_aplicadas": {
+    "49-50": 17.37,
+    "67": 15.88
+  },
+  "ocultos": [
+    "Concatedral_contrafuerte_2",
+    "Concatedral_contrafuerte_3",
+    "Concatedral_contrafuerte_4"
+  ],
+  "objetos_con_caras_degeneradas": []
+}

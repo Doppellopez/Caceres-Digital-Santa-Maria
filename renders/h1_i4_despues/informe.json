@@ -1,0 +1,41 @@
+{
+  "profundidad_supuesta": 0.45,
+  "ventanas": {
+    "W1": {
+      "s": 9.879,
+      "ancho": 1.79,
+      "antepecho_z": 11.678,
+      "clave_z": 14.154,
+      "rayos": 1646,
+      "fugas": 0,
+      "visible_desde_el_frente_pct": 100.0
+    },
+    "W2": {
+      "s": 3.613,
+      "ancho": 1.79,
+      "antepecho_z": 11.717,
+      "clave_z": 14.193,
+      "rayos": 1646,
+      "fugas": 0,
+      "visible_desde_el_frente_pct": 62.8
+    },
+    "W3": {
+      "s": -2.043,
+      "ancho": 1.79,
+      "antepecho_z": 11.982,
+      "clave_z": 14.458,
+      "rayos": 1646,
+      "fugas": 0,
+      "visible_desde_el_frente_pct": 100.0
+    },
+    "W4": {
+      "s": 20.669,
+      "ancho": 2.37,
+      "antepecho_z": 6.086,
+      "clave_z": 10.91,
+      "rayos": 4046,
+      "fugas": 0,
+      "visible_desde_el_frente_pct": 100.0
+    }
+  }
+}

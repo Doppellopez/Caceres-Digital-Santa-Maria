@@ -1,0 +1,39 @@
+{
+  "W1": {
+    "tipo": "medio_punto",
+    "s": 9.879,
+    "semiancho": 0.895,
+    "semiancho_vidrio": 0.254,
+    "clave_z": 14.154,
+    "antepecho_z": 11.678,
+    "antepecho_vidrio_z": 11.951
+  },
+  "W2": {
+    "tipo": "medio_punto",
+    "s": 3.613,
+    "semiancho": 0.895,
+    "semiancho_vidrio": 0.254,
+    "clave_z": 14.193,
+    "antepecho_z": 11.717,
+    "antepecho_vidrio_z": 11.99
+  },
+  "W3": {
+    "tipo": "medio_punto",
+    "s": -2.043,
+    "semiancho": 0.895,
+    "semiancho_vidrio": 0.254,
+    "clave_z": 14.458,
+    "antepecho_z": 11.982,
+    "antepecho_vidrio_z": 12.255
+  },
+  "W4": {
+    "tipo": "apuntada",
+    "s": 20.669,
+    "semiancho": 1.186,
+    "semiancho_vidrio": 0.222,
+    "clave_z": 10.91,
+    "clave_vidrio_z": 9.655,
+    "antepecho_z": 6.086,
+    "antepecho_vidrio_z": 6.445
+  }
+}

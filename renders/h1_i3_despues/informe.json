@@ -1,0 +1,58 @@
+{
+  "cuerpo_s": [
+    -0.9,
+    7.69
+  ],
+  "frente_d": 1.32,
+  "arco_exterior": {
+    "ancho": 7.57,
+    "clave_z": 10.37
+  },
+  "arco_interior": {
+    "ancho": 3.73,
+    "clave_z_modelo": 8.42,
+    "clave_z_foto": 8.43
+  },
+  "arranque_z": 6.08,
+  "umbral_z": 1.98,
+  "profundidad_supuesta": 1.0,
+  "vertices_de_cubierta_movidos": 1,
+  "terreno": {
+    "vertices_bajados": 45,
+    "descenso_maximo_m": 0.46
+  },
+  "escalera": {
+    "alta": [
+      0.84,
+      6.27,
+      0.8266666666666667,
+      1.9799999999999998
+    ],
+    "media": [
+      0.4,
+      6.62,
+      1.2149999999999999,
+      1.8
+    ],
+    "pie": [
+      0.33,
+      6.7,
+      1.6833333333333333,
+      1.57
+    ]
+  },
+  "rayos_al_pie": {
+    "rayos": 847,
+    "colados": 0
+  },
+  "objetos": [
+    "Concatedral_contrafuerte_portada",
+    "Concatedral_cuerpo_portada",
+    "Concatedral_portada_puertas",
+    "Concatedral_portada_rebaje",
+    "Concatedral_portada_cornisa",
+    "Concatedral_portada_canecillos",
+    "Concatedral_portada_peldanos"
+  ],
+  "caras_degeneradas": []
+}

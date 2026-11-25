@@ -1,0 +1,26 @@
+{
+  "objetos_nuevos": [
+    "Concatedral_contrafuerte_B2_pie",
+    "Concatedral_contrafuerte_B2_repisa",
+    "Concatedral_contrafuerte_B3_bajo",
+    "Concatedral_contrafuerte_B3_alto",
+    "Concatedral_contrafuerte_B4",
+    "Concatedral_remate_B1",
+    "Concatedral_remate_B1_losa",
+    "Concatedral_remate_B2",
+    "Concatedral_remate_B2_losa",
+    "Concatedral_remate_B3",
+    "Concatedral_remate_B3_losa",
+    "Concatedral_remate_B4",
+    "Concatedral_remate_B4_losa",
+    "Concatedral_remate_B5",
+    "Concatedral_remate_B5_losa"
+  ],
+  "ocultos": [
+    "Concatedral_contrafuerte_0",
+    "Concatedral_contrafuerte_1"
+  ],
+  "repisa_B2_z": 5.71,
+  "repisa_B3_z": 11.9,
+  "caras_degeneradas": []
+}

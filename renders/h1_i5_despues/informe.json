@@ -1,0 +1,65 @@
+{
+  "objetos_texturizados": [
+    "Concatedral_contrafuerte_5",
+    "Concatedral_contrafuerte_6",
+    "Concatedral_contrafuerte_7",
+    "Concatedral_contrafuerte_8",
+    "Concatedral_contrafuerte_9",
+    "Concatedral_contrafuerte_B2_pie",
+    "Concatedral_contrafuerte_B2_repisa",
+    "Concatedral_contrafuerte_B3_alto",
+    "Concatedral_contrafuerte_B3_bajo",
+    "Concatedral_contrafuerte_B4",
+    "Concatedral_contrafuerte_portada",
+    "Concatedral_contrafuerte_torre",
+    "Concatedral_cuerpo_escalonado",
+    "Concatedral_cuerpo_portada",
+    "Concatedral_fachadas",
+    "Concatedral_portada_canecillos",
+    "Concatedral_portada_cornisa",
+    "Concatedral_portada_peldanos",
+    "Concatedral_portada_rebaje",
+    "Concatedral_remate_B1",
+    "Concatedral_remate_B1_losa",
+    "Concatedral_remate_B2",
+    "Concatedral_remate_B2_losa",
+    "Concatedral_remate_B3",
+    "Concatedral_remate_B3_losa",
+    "Concatedral_remate_B4",
+    "Concatedral_remate_B4_losa",
+    "Concatedral_remate_B5",
+    "Concatedral_remate_B5_losa",
+    "Concatedral_torre_fachadas",
+    "Concatedral_torre_interior_provisional",
+    "Concatedral_ventana_W1",
+    "Concatedral_ventana_W2",
+    "Concatedral_ventana_W3",
+    "Concatedral_ventana_W4"
+  ],
+  "caras_con_dovelas": {
+    "Concatedral_cuerpo_portada": 768,
+    "Concatedral_ventana_W1": 335,
+    "Concatedral_ventana_W2": 335,
+    "Concatedral_ventana_W3": 335,
+    "Concatedral_ventana_W4": 336
+  },
+  "texturas": {
+    "silleria_dorada_color": {
+      "ruta": "//..\\texturas\\concatedral\\silleria_dorada_color.png",
+      "tamano": [
+        2048,
+        1024
+      ],
+      "existe": true
+    },
+    "silleria_dorada_normal": {
+      "ruta": "//..\\texturas\\concatedral\\silleria_dorada_normal.png",
+      "tamano": [
+        2048,
+        1024
+      ],
+      "existe": true
+    }
+  },
+  "vertices_modificados": 0
+}

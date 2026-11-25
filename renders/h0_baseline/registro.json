@@ -1,0 +1,87 @@
+{
+  "blender": "5.2.2 LTS",
+  "origen_modelo": "modelos/v0.3/santa_maria_v0_3.glb",
+  "motor": "Cycles CPU",
+  "muestras": 48,
+  "denoise": true,
+  "transformacion_de_vista": "Standard",
+  "resolucion": [
+    1600,
+    1000
+  ],
+  "mallas_importadas": 75,
+  "mallas_recuperadas": [
+    "Concatedral_contrafuerte_0",
+    "Concatedral_contrafuerte_1",
+    "Concatedral_contrafuerte_2",
+    "Concatedral_contrafuerte_3",
+    "Concatedral_contrafuerte_4",
+    "Concatedral_contrafuerte_5",
+    "Concatedral_contrafuerte_6",
+    "Concatedral_contrafuerte_7",
+    "Concatedral_contrafuerte_8"
+  ],
+  "mallas_total": 84,
+  "camaras": {
+    "CAM_general": {
+      "posicion": [
+        -75.0,
+        62.0,
+        78.0
+      ],
+      "mira_a": [
+        14.0,
+        -6.0,
+        6.0
+      ],
+      "rotacion_xyz_grados": [
+        57.266,
+        0.0,
+        -127.381
+      ],
+      "focal_mm": 40.0,
+      "sensor_mm": 36.0,
+      "cota_suelo": null
+    },
+    "CAM_peaton_noroeste": {
+      "posicion": [
+        -5.0,
+        16.0,
+        2.678
+      ],
+      "mira_a": [
+        17.0,
+        1.0,
+        8.0
+      ],
+      "rotacion_xyz_grados": [
+        101.303,
+        -0.0,
+        -124.287
+      ],
+      "focal_mm": 20.0,
+      "sensor_mm": 36.0,
+      "cota_suelo": 1.028
+    },
+    "CAM_peaton_oeste_torre": {
+      "posicion": [
+        -5.5,
+        2.0,
+        3.168
+      ],
+      "mira_a": [
+        14.0,
+        -13.0,
+        11.0
+      ],
+      "rotacion_xyz_grados": [
+        107.66,
+        -0.0,
+        -127.569
+      ],
+      "focal_mm": 20.0,
+      "sensor_mm": 36.0,
+      "cota_suelo": 1.518
+    }
+  }
+}

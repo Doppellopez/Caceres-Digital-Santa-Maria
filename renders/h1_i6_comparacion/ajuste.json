@@ -1,0 +1,54 @@
+{
+  "foto": "Santa María, Cáceres.JPG",
+  "autor": "Jesusccastillo",
+  "licencia": "CC BY-SA 3.0 ES",
+  "exif_focal": {
+    "real": 18.0,
+    "eq": 27
+  },
+  "camara_xyz": [
+    -4.485,
+    26.179,
+    3.651
+  ],
+  "giro_cabeceo_alabeo_grados": [
+    -47.888,
+    17.057,
+    2.068
+  ],
+  "puntos_de_ajuste_error_px": {
+    "torre, esquina oeste arriba": 13.7,
+    "torre, esquina norte arriba": 13.5,
+    "torre, esquina oeste al pie": 22.1
+  },
+  "imagen_px": [
+    2000,
+    1328
+  ],
+  "matriz_camara": [
+    [
+      -0.7484489679336548,
+      -0.16979478299617767,
+      -0.6410879492759705,
+      -4.485400199890137
+    ],
+    [
+      -0.6622940301895142,
+      0.24165719747543335,
+      0.7092025876045227,
+      26.179000854492188
+    ],
+    [
+      0.03450460359454155,
+      0.9553907513618469,
+      -0.2933221757411957,
+      3.6507999897003174
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ]
+}

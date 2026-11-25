@@ -1,0 +1,8 @@
+newmtl terreno
+Kd .60 .56 .48
+newmtl cubierta
+Kd .67 .43 .30
+newmtl fachada
+Kd .80 .75 .64
+newmtl concatedral
+Kd .72 .66 .58

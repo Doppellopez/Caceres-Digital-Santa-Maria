@@ -1,0 +1,66 @@
+{
+  "largo_cara": 7.214,
+  "z_calibracion": [
+    1.452,
+    27.869
+  ],
+  "cornisas_z": [
+    21.587,
+    17.907
+  ],
+  "campanario": {
+    "f": 0.492,
+    "ancho": 1.892,
+    "z_alto": 26.344,
+    "z_bajo": 23.073
+  },
+  "balaustrada": {
+    "f": 0.501,
+    "ancho": 1.643,
+    "z_alto": 22.958,
+    "z_bajo": 21.856
+  },
+  "medallon": {
+    "f": 0.516,
+    "ancho": 1.658,
+    "z_alto": 21.024,
+    "z_bajo": 19.258
+  },
+  "ventanuco_medallon": {
+    "f": 0.331,
+    "ancho": 0.627,
+    "z_alto": 20.166,
+    "z_bajo": 19.34
+  },
+  "ventanuco_alto": {
+    "f": 0.549,
+    "ancho": 0.883,
+    "z_alto": 17.144,
+    "z_bajo": 15.795
+  },
+  "ciega": {
+    "f": 0.517,
+    "ancho": 1.649,
+    "z_alto": 14.668,
+    "z_bajo": 11.942
+  },
+  "ventanuco_bajo": {
+    "f": 0.392,
+    "ancho": 0.952,
+    "z_alto": 7.548,
+    "z_bajo": 6.379
+  },
+  "campana": {
+    "f": 0.463,
+    "ancho": 1.084,
+    "z_alto": 24.515,
+    "z_bajo": 23.332
+  },
+  "pinaculo": {
+    "pie": 0.0,
+    "pedestal": 0.819,
+    "plato_bajo": 1.767,
+    "plato_alto": 2.368,
+    "remate": 2.761
+  }
+}
