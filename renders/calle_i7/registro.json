@@ -1,0 +1,117 @@
+{
+  "blender": "5.2.2 LTS",
+  "origen": "blender/santa_maria.blend",
+  "altura_ojos_m": 1.65,
+  "resolucion": [
+    2000,
+    1500
+  ],
+  "muestras": 64,
+  "sensor_mm": 36.0,
+  "vistas": {
+    "N": {
+      "posicion": [
+        44.137,
+        48.329,
+        2.006
+      ],
+      "rumbo_grados": 195.4,
+      "focal_mm": 35.0,
+      "desplazamiento_y": 0.1377,
+      "iglesia_a_la_vista": 0.058,
+      "cabe_entera": true,
+      "cielo_libre": 0.479
+    },
+    "NE": {
+      "posicion": [
+        46.139,
+        15.089,
+        2.261
+      ],
+      "rumbo_grados": 247.7,
+      "focal_mm": 14.0,
+      "desplazamiento_y": 0.6733,
+      "iglesia_a_la_vista": 0.096,
+      "cabe_entera": false,
+      "cielo_libre": 0.458
+    },
+    "E": {
+      "posicion": [
+        70.339,
+        -1.945,
+        2.055
+      ],
+      "rumbo_grados": 273.4,
+      "focal_mm": 29.8,
+      "desplazamiento_y": 0.1434,
+      "iglesia_a_la_vista": 0.016,
+      "cabe_entera": true,
+      "cielo_libre": 0.896
+    },
+    "SE": {
+      "posicion": [
+        71.094,
+        -47.2,
+        -2.131
+      ],
+      "rumbo_grados": 315.4,
+      "focal_mm": 35.0,
+      "desplazamiento_y": 0.137,
+      "iglesia_a_la_vista": 0.012,
+      "cabe_entera": true,
+      "cielo_libre": 0.208
+    },
+    "S": {
+      "posicion": [
+        12.672,
+        -38.123,
+        4.481
+      ],
+      "rumbo_grados": 12.7,
+      "focal_mm": 20.2,
+      "desplazamiento_y": 0.2348,
+      "iglesia_a_la_vista": 0.166,
+      "cabe_entera": true,
+      "cielo_libre": 0.833
+    },
+    "SO": {
+      "posicion": [
+        -7.694,
+        -17.582,
+        4.119
+      ],
+      "rumbo_grados": 76.2,
+      "focal_mm": 14.0,
+      "desplazamiento_y": 0.2941,
+      "iglesia_a_la_vista": 0.212,
+      "cabe_entera": false,
+      "cielo_libre": 0.688
+    },
+    "O": {
+      "posicion": [
+        -6.11,
+        9.684,
+        2.766
+      ],
+      "rumbo_grados": 111.0,
+      "focal_mm": 14.0,
+      "desplazamiento_y": 0.2786,
+      "iglesia_a_la_vista": 0.224,
+      "cabe_entera": false,
+      "cielo_libre": 0.688
+    },
+    "NO": {
+      "posicion": [
+        3.919,
+        19.975,
+        2.606
+      ],
+      "rumbo_grados": 131.6,
+      "focal_mm": 15.2,
+      "desplazamiento_y": 0.2632,
+      "iglesia_a_la_vista": 0.22,
+      "cabe_entera": true,
+      "cielo_libre": 0.833
+    }
+  }
+}

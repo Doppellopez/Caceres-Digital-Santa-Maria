@@ -1,0 +1,68 @@
+unity | 6000.3.6f1
+pipeline | URP, espacio de color lineal
+importacion | escala de archivo 1, globalScale 1, normales importadas
+raiz_modelo | posicion (0, 0, 0) giro (0, 0, 0) escala (1, 1, 1)
+mallas | 144 de 144
+triangulos | 82784 de 82784
+material_automatico | Bronce_provisional: Universal Render Pipeline/Lit, color RGBA(0.235, 0.272, 0.206, 1.000), textura ninguna
+material_automatico | Granito_liso_provisional: Universal Render Pipeline/Lit, color RGBA(0.634, 0.537, 0.424, 1.000), textura ninguna
+material_automatico | Granito_silleria_concatedral: Universal Render Pipeline/Lit, color RGBA(1.000, 1.000, 1.000, 1.000), textura silleria_dorada_color
+material_automatico | Hueco_oscuro_provisional: Universal Render Pipeline/Lit, color RGBA(0.051, 0.039, 0.026, 1.000), textura ninguna
+material_automatico | Madera_provisional: Universal Render Pipeline/Lit, color RGBA(0.235, 0.168, 0.118, 1.000), textura ninguna
+material_automatico | Provisional_cubierta: Universal Render Pipeline/Lit, color RGBA(0.835, 0.685, 0.583, 1.000), textura ninguna
+material_automatico | Provisional_fachada_v03: Universal Render Pipeline/Lit, color RGBA(0.910, 0.878, 0.820, 1.000), textura ninguna
+material_automatico | Provisional_terreno: Universal Render Pipeline/Lit, color RGBA(0.800, 0.772, 0.721, 1.000), textura ninguna
+material_automatico | Vidrio_azul_provisional: Universal Render Pipeline/Lit, color RGBA(0.112, 0.190, 0.323, 1.000), textura ninguna
+material_automatico | Vidrio_oscuro_provisional: Universal Render Pipeline/Lit, color RGBA(0.070, 0.078, 0.093, 1.000), textura ninguna
+materiales_asignados | 144 objetos; sin correspondencia de nombre: ninguno
+control | Terreno_interpolado: Unity (-79.886, -8.896, -79.913) a (79.493, 14.27, 79.936); esperado (-79.886, -8.896, -79.913) a (79.493, 14.27, 79.936); error 0 m
+control | Concatedral_torre_pinaculo_2: Unity (5.113, 27.77, -7.777) a (6.424, 30.531, -6.544); esperado (5.113, 27.77, -7.778) a (6.424, 30.531, -6.544); error 0 m
+control | Concatedral_portada_peldanos: Unity (12.204, 1.32, 0.774) a (17.041, 1.98, 6.166); esperado (12.204, 1.32, 0.774) a (17.041, 1.98, 6.166); error 0 m
+control | Concatedral_ventana_W4_vidrio: Unity (26.565, 6.445, 15.54) a (26.854, 9.615, 15.876); esperado (26.565, 6.445, 15.54) a (26.854, 9.615, 15.876); error 0 m
+control | Concatedral_cuerpo_portada: Unity (11.276, 1.32, -0.329) a (17.874, 12.54, 7.045); esperado (11.276, 1.32, -0.33) a (17.874, 12.54, 7.045); error 0 m
+ejes_escala_error_max_m | 0
+caras_invisibles | CAM_foto: 0 de 23111 rayos (0 %), de ellos 0 dejan ver el cielo y 0 son de la concatedral
+caras_invisibles | CAM_peaton_noroeste: 0 de 27724 rayos (0 %), de ellos 0 dejan ver el cielo y 0 son de la concatedral
+caras_invisibles | CAM_portada: 0 de 36000 rayos (0 %), de ellos 0 dejan ver el cielo y 0 son de la concatedral
+caras_invisibles | CAM_torre: 4719 de 27567 rayos (17.118 %), de ellos 204 dejan ver el cielo y 4402 son de la concatedral
+caras_invisibles | CAM_general: 2132 de 29243 rayos (7.291 %), de ellos 107 dejan ver el cielo y 1352 son de la concatedral
+caras_invisibles_objeto | Concatedral_ala_sur: 3586
+caras_invisibles_objeto | Concatedral_nave: 1871
+caras_invisibles_objeto | Edificio_11_fachadas: 274
+caras_invisibles_objeto | Edificio_34_fachadas: 232
+caras_invisibles_objeto | Edificio_26_fachadas: 212
+caras_invisibles_objeto | Concatedral_abside: 169
+caras_invisibles_objeto | Edificio_34_cubierta: 128
+caras_invisibles_objeto | Concatedral_ala_norte: 91
+caras_invisibles_objeto | Edificio_25_fachadas: 52
+caras_invisibles_objeto | Edificio_29_fachadas: 41
+caras_invisibles_objeto | Edificio_10_fachadas: 39
+caras_invisibles_objeto | Edificio_16_cubierta: 33
+caras_invisibles_objeto | Edificio_33_fachadas: 28
+caras_invisibles_objeto | Edificio_16_fachadas: 22
+caras_invisibles_objeto | Concatedral_fachadas: 17
+caras_invisibles_objeto | Edificio_21_fachadas: 15
+caras_invisibles_objeto | Edificio_33_cubierta: 7
+caras_invisibles_objeto | Concatedral_contrafuerte_7: 6
+caras_invisibles_objeto | Concatedral_contrafuerte_8: 6
+caras_invisibles_objeto | Concatedral_contrafuerte_9: 4
+caras_invisibles_objeto | Edificio_30_fachadas: 4
+caras_invisibles_objeto | Edificio_25_cubierta: 4
+caras_invisibles_objeto | Edificio_32_fachadas: 2
+caras_invisibles_objeto | Concatedral_contrafuerte_5: 2
+caras_invisibles_objeto | Concatedral_contrafuerte_6: 2
+terreno_plaza | 0 de 3721 puntos sin suelo pisable desde arriba
+recorrido_tramo | plaza_a_puerta tramo 1: llega en (13.487, 1.506, 5.866), meta (13.578, 1.482, 5.788)
+recorrido_tramo | plaza_a_puerta tramo 2: llega en (15.356, 2.01, 4.26), meta (15.437, 1.98, 4.191)
+recorrido | plaza_a_puerta: completado, cota final 2.01 (umbral 1.98), cota minima 1.338
+recorrido_tramo | a_lo_largo_de_la_fachada tramo 1: llega en (14.108, 1.333, 11.008), meta (14.178, 1.3, 11.09)
+recorrido_tramo | a_lo_largo_de_la_fachada tramo 2: llega en (21.94, 1.161, 20.096), meta (21.998, 1.129, 20.192)
+recorrido | a_lo_largo_de_la_fachada: completado, cota final 1.161, cota minima 1.161
+captura | CAM_foto
+captura | CAM_foto
+captura | CAM_peaton_noroeste
+captura | CAM_portada
+captura | CAM_torre
+captura | CAM_general
+captura | persona_portada
+fin | correcto

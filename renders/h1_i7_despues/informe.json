@@ -1,0 +1,72 @@
+{
+  "muestreo": {
+    "mortero_sobre_piedra_en_foto": [
+      1.202,
+      1.317,
+      1.575
+    ],
+    "muestras_de_tono": 156,
+    "hiladas": 10
+  },
+  "objetos_granito_liso": [
+    "Concatedral_torre_balaustres",
+    "Concatedral_torre_pinaculo_1",
+    "Concatedral_torre_pinaculo_2",
+    "Concatedral_torre_pinaculo_3",
+    "Concatedral_torre_pinaculo_4"
+  ],
+  "puertas_ancho_alto_m": [
+    [
+      1.6,
+      4.11
+    ],
+    [
+      1.6,
+      4.11
+    ]
+  ],
+  "medallon_diametro_m": 1.77,
+  "vertices_modificados": 0,
+  "texturas": {
+    "silleria_foto_color": {
+      "ruta": "//..\\texturas\\concatedral\\silleria_foto_color.png",
+      "tamano": [
+        2048,
+        1024
+      ],
+      "existe": true
+    },
+    "silleria_foto_normal": {
+      "ruta": "//..\\texturas\\concatedral\\silleria_foto_normal.png",
+      "tamano": [
+        2048,
+        1024
+      ],
+      "existe": true
+    },
+    "granito_foto_color": {
+      "ruta": "//..\\texturas\\concatedral\\granito_foto_color.png",
+      "tamano": [
+        1024,
+        1024
+      ],
+      "existe": true
+    },
+    "puerta_NO_foto": {
+      "ruta": "//..\\texturas\\concatedral\\puerta_NO_foto.png",
+      "tamano": [
+        256,
+        840
+      ],
+      "existe": true
+    },
+    "medallon_NO_foto": {
+      "ruta": "//..\\texturas\\concatedral\\medallon_NO_foto.png",
+      "tamano": [
+        256,
+        256
+      ],
+      "existe": true
+    }
+  }
+}

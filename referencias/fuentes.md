@@ -45,4 +45,22 @@ Licencia registrada allí: CC BY 4.0, pendiente de confirmar en la ficha de cada
 
 ## Red topográfica municipal 2009 (RedPol)
 
-`datos/originales/redpol_2009/`: `RedPol_2009_WEB.dwg`, descargado por Jorge de https://sig.caceres.es/red_pol/red_pol_09/Grafico_de_Red/RedPol_2009_WEB.zip el 2026-11-25. Convertido a DXF con LibreDWG 0.14. Coordenadas en ED50 / UTM 29N. Contiene puntos, visuales y rótulos de la red topográfica; no edificios. Licencia sin comprobar: no publicar ni redistribuir.
+`datos/originales/redpol_2009/`: `RedPol_2009_WEB.dwg`, descargado por Jorge de https://sig.caceres.es/red_pol/red_pol_09/Grafico_de_Red/RedPol_2009_WEB.zip el 2026-11-25. Convertido a DXF con LibreDWG 0.14. Coordenadas en ED50 / UTM 29N. Contiene puntos, visuales y rótulos de la red topográfica; no edificios. Licencia sin comprobar. Publicado en GitHub el 2026-11-26 por decisión expresa de Jorge.
+
+## Fotos propias (Jorge)
+
+`referencias/fotos_jorge/`: copiadas el 2026-11-26 de `G:\Mi unidad\Qaxrix fotos`, a petición de Jorge. Galaxy S25 Ultra, 2026-11-25, 18:46 a 18:49, de noche; sin posición GPS. Se tratan como fotos de Jorge (autoría pendiente de confirmar por él). En 184811 salen personas reconocibles o parcialmente visibles: revisar antes de publicar las fotos.
+
+| Archivo | Qué muestra (identificación a la vista) | Uso |
+|---|---|---|
+| 20261125_184623.jpg | Mampostería con luz artificial; edificio sin identificar | ninguno |
+| 20261125_184632.jpg | Detalle de mampostería; edificio sin identificar | ninguno |
+| 20261125_184811.jpg | Fachada noroeste y torre | texturas de puerta y medallón |
+| 20261125_184905.jpg | Fachada con rosetón y portada pequeña, torre (no es la noroeste) | ninguno todavía |
+| 20261125_184908.jpg | La misma fachada, parte baja | variación de tono entre sillares |
+| 20261125_184911.jpg | La misma fachada hacia su contrafuerte y el edificio contiguo | ninguno todavía |
+| 20261125_184935.jpg | Primer plano de sillería de granito; se supone de la concatedral | grano de la piedra y color del mortero |
+
+No se copió `Santa María.jpg` de la misma carpeta: no tiene datos de cámara y parece una copia reducida de la foto de Commons de Jesusccastillo (CC BY-SA 3.0 ES).
+
+Texturas del maestro desde la intervención 7 (`texturas/concatedral/*_foto*.png`): derivadas de estas fotos (`herramientas/texturas_foto.py`). El despiece de la sillería es generado; el tono medio sigue siendo el ajustado a ojo, porque las fotos son nocturnas. Sustituyen a `silleria_dorada_*.png`, que se conservan en disco.

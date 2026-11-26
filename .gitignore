@@ -2,8 +2,13 @@ __pycache__/
 *.blend1
 *.blend2
 
-# Renders: se versionan solo el baseline y el estado aprobado de H1; el resto se
-# regenera con los scripts. Los informes JSON si se versionan.
+# Renders: se versionan el baseline, el estado aprobado de H1 y las ultimas vistas
+# (calle, cenital e intervencion 7); el resto se regenera con los scripts. Los informes JSON si se versionan.
 renders/**/*.png
 !renders/h0_baseline/*.png
 !renders/h1_i6_despues/*.png
+!renders/h1_i7_antes/*.png
+!renders/h1_i7_despues/*.png
+!renders/calle/*.png
+!renders/calle_i7/*.png
+!renders/cenital/CAM_cenital_iglesia.png
