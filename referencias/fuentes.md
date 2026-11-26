@@ -45,7 +45,7 @@ Licencia registrada allí: CC BY 4.0, pendiente de confirmar en la ficha de cada
 
 ## Red topográfica municipal 2009 (RedPol)
 
-`datos/originales/redpol_2009/`: `RedPol_2009_WEB.dwg`, descargado por Jorge de https://sig.caceres.es/red_pol/red_pol_09/Grafico_de_Red/RedPol_2009_WEB.zip el 2026-11-25. Convertido a DXF con LibreDWG 0.14. Coordenadas en ED50 / UTM 29N. Contiene puntos, visuales y rótulos de la red topográfica; no edificios. Licencia sin comprobar. Publicado en GitHub el 2026-11-26 por decisión expresa de Jorge.
+`datos/originales/redpol_2009/`: `RedPol_2009_WEB.dwg`, descargado por Jorge de https://sig.caceres.es/red_pol/red_pol_09/Grafico_de_Red/RedPol_2009_WEB.zip el 2026-11-25. Convertido a DXF con LibreDWG 0.14. Coordenadas en ED50 / UTM 29N. Contiene puntos, visuales y rótulos de la red topográfica; no edificios. Publicado en GitHub el 2026-11-26 por decisión expresa de Jorge. Licencia: ver la declaración al final.
 
 ## Fotos propias (Jorge)
 
@@ -80,3 +80,9 @@ Medidas sobre las fotos propias 184905, 184908 y 184911. Texturas recortadas de 
 ## Cristaleras de la nave noroeste (intervención 12)
 
 `texturas/concatedral/cristalera_W1_color.png` a `_W4_color.png`: generadas por código (`herramientas/i12_cristaleras_nave.py`), sin fotografías. Diseño inventado.
+
+## Licencia de uso de los datos cartográficos
+
+Declaración de Jorge, 2026-11-26: «tengo licencia de uso de los datos cartográficos».
+
+No constan todavía el concedente, el nombre o tipo de licencia, el texto de atribución ni si permite redistribuir los archivos originales, publicados en el repositorio. No se ha visto el documento. No cambia lo anotado para las fotografías ni para los datos del CNIG/IGN.

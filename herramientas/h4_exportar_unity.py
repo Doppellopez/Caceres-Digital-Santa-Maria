@@ -230,7 +230,7 @@ manifiesto = {
                "silleria: despiece generado con grano de fotos propias; intervenciones 7 y 8 sin revisar",
                "teja arabe (intervencion 9) generada por codigo, sin revisar; solo textura",
                "fachada suroeste (intervencion 10) sin revisar; vuelos y profundidades estimados",
-               "licencia de la cartografia municipal sin comprobar"],
+               "cartografia: licencia de uso declarada por Jorge; condiciones sin documentar"],
 }
 (SALIDA / "manifiesto.json").write_text(json.dumps(manifiesto, indent=1, ensure_ascii=False),
                                         encoding="utf-8")
