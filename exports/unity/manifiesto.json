@@ -1,9 +1,9 @@
 {
- "version": "H1-prueba-1",
+ "version": "H1-i12-prueba-1",
  "origen": {
   "archivo": "blender/santa_maria.blend",
-  "sha256": "19ae3650b391822a462cbf231db06967bd4aaad99026520ccee89171dc2ae129",
-  "commit_al_exportar": "9d0d7f6",
+  "sha256": "063dde98cd6303259b8a48c234837a0897932322131353a63f2a4b2250de8a6c",
+  "commit_al_exportar": "122b3b8",
   "blender": "5.2.2 LTS"
  },
  "unidades": "metros",
@@ -21,19 +21,71 @@
  "archivos": [
   {
    "ruta": "santa_maria.fbx",
-   "sha256": "9be6a8d420d875d7cb2aa1c3b263ebf2bf552ff2117620249c3835deb43f925e"
+   "sha256": "64cba17310416e9770589f0a06e0247879dfa4a16bb53915d89c9c610c0e8593"
   },
   {
-   "ruta": "Texturas/silleria_dorada_color.png",
-   "sha256": "a987fa3be3b14590141d57b9a5b0ec8b0ca466a0076fedaa92df431137c3bc5a"
+   "ruta": "Texturas/cristalera_torre_color.png",
+   "sha256": "6ad3aefa0b3daf15e01c33330dfb5cc1446a55f9432b2cc08c6a1c52e023d016"
   },
   {
-   "ruta": "Texturas/silleria_dorada_normal.png",
-   "sha256": "0667794faf8b4b651ef79657ed7393cb0aef9d774e682b1b1fbc036695450396"
+   "ruta": "Texturas/cristalera_W1_color.png",
+   "sha256": "e60e517fea3ac7d3bc1e6e708bd3ea0a408f40b951493df5132de8ade46f533e"
+  },
+  {
+   "ruta": "Texturas/cristalera_W2_color.png",
+   "sha256": "a814abc20da50014f31f4120887c0874d7b4ea67b90c2c4a5d1dccdaab937e4d"
+  },
+  {
+   "ruta": "Texturas/cristalera_W3_color.png",
+   "sha256": "7104aa58b1755000e596f7f303161ae9fb4eb50e1749c3848c2c80fb98fb5aa9"
+  },
+  {
+   "ruta": "Texturas/cristalera_W4_color.png",
+   "sha256": "693636a7ad5edf30cca7375e271db91da995003182d595c27539bb47c07f1107"
+  },
+  {
+   "ruta": "Texturas/granito_foto_color.png",
+   "sha256": "b62c0d8fc096a58b24478c0932f2a60696b76ca7ac23159a1c6a7947c47a776f"
+  },
+  {
+   "ruta": "Texturas/medallon_NO_foto.png",
+   "sha256": "bfb0bb38f28aa98357c55dff01b815b1a3c0a039d025952670bca3dd8c852213"
+  },
+  {
+   "ruta": "Texturas/medallon_SO_foto.png",
+   "sha256": "90930eea4e431b37a4c33cc41978b5e962b178b4fe2d02040c696c2b8e766b96"
+  },
+  {
+   "ruta": "Texturas/puerta_NO_foto.png",
+   "sha256": "e5dbe0f151383eda0beadc06e0e4676bf81831dd5ba7e0387589e824c3e2794b"
+  },
+  {
+   "ruta": "Texturas/puerta_SO_foto.png",
+   "sha256": "f7c6f82cccdb6d14a291f3304564f4bcc3d2f39286470b3ce51d20026935faa5"
+  },
+  {
+   "ruta": "Texturas/roseton_SO_foto.png",
+   "sha256": "babbb88c6af180373cbf2d8a68fc7d75e8ce34a4c9dd600279d3d076eda58a7a"
+  },
+  {
+   "ruta": "Texturas/silleria_foto_color.png",
+   "sha256": "6b4289a68cf25a3eeb553555540776f89784e725c7d035a2903dd08fdd35809f"
+  },
+  {
+   "ruta": "Texturas/silleria_foto_normal.png",
+   "sha256": "a604a5e2e3f40c5d0826fd74008fef8abb87fb9db8b100198b5ba746aa179b79"
+  },
+  {
+   "ruta": "Texturas/teja_arabe_color.png",
+   "sha256": "5ce2509debdcb400e60835ed58749d02bf184541c5c9db685664721ff5eb94ce"
+  },
+  {
+   "ruta": "Texturas/teja_arabe_normal.png",
+   "sha256": "11704839dfae78b23e34b642866f88ed6435af98b2c0efae098d8c4d22cb1c43"
   }
  ],
- "mallas": 144,
- "triangulos": 82784,
+ "mallas": 187,
+ "triangulos": 94226,
  "excluidos_ocultos": [
   "Concatedral_contrafuerte_0",
   "Concatedral_contrafuerte_1",
@@ -41,6 +93,12 @@
   "Concatedral_contrafuerte_3",
   "Concatedral_contrafuerte_4"
  ],
+ "caras_volteadas_solo_en_exportacion": {
+  "Concatedral_nave": 2,
+  "Concatedral_ala_norte": 0,
+  "Concatedral_ala_sur": 0,
+  "Concatedral_abside": 0
+ },
  "materiales": [
   {
    "nombre": "Bronce_provisional",
@@ -53,14 +111,76 @@
    "metalico": 0.7
   },
   {
-   "nombre": "Granito_liso_provisional",
+   "nombre": "Cristalera_W1_NO",
    "color_lineal": [
-    0.36,
-    0.25,
-    0.15
+    0.8,
+    0.8,
+    0.8
    ],
-   "rugosidad": 0.92,
-   "metalico": 0.0
+   "rugosidad": 0.6,
+   "metalico": 0.0,
+   "textura_color": "cristalera_W1_color.png",
+   "sin_repetir": true
+  },
+  {
+   "nombre": "Cristalera_W2_NO",
+   "color_lineal": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "rugosidad": 0.6,
+   "metalico": 0.0,
+   "textura_color": "cristalera_W2_color.png",
+   "sin_repetir": true
+  },
+  {
+   "nombre": "Cristalera_W3_NO",
+   "color_lineal": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "rugosidad": 0.6,
+   "metalico": 0.0,
+   "textura_color": "cristalera_W3_color.png",
+   "sin_repetir": true
+  },
+  {
+   "nombre": "Cristalera_W4_NO",
+   "color_lineal": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "rugosidad": 0.6,
+   "metalico": 0.0,
+   "textura_color": "cristalera_W4_color.png",
+   "sin_repetir": true
+  },
+  {
+   "nombre": "Cristalera_torre_NO",
+   "color_lineal": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "rugosidad": 0.6,
+   "metalico": 0.0,
+   "textura_color": "cristalera_torre_color.png",
+   "sin_repetir": true
+  },
+  {
+   "nombre": "Granito_liso_concatedral",
+   "color_lineal": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "rugosidad": 0.9,
+   "metalico": 0.0,
+   "textura_color": "granito_foto_color.png",
+   "sin_repetir": false
   },
   {
    "nombre": "Granito_silleria_concatedral",
@@ -71,8 +191,19 @@
    ],
    "rugosidad": 0.92,
    "metalico": 0.0,
-   "textura_color": "silleria_dorada_color.png",
-   "textura_normal": "silleria_dorada_normal.png"
+   "textura_color": "silleria_foto_color.png",
+   "sin_repetir": false,
+   "textura_normal": "silleria_foto_normal.png"
+  },
+  {
+   "nombre": "Hierro_provisional",
+   "color_lineal": [
+    0.012,
+    0.01,
+    0.008
+   ],
+   "rugosidad": 0.6,
+   "metalico": 0.6
   },
   {
    "nombre": "Hueco_oscuro_provisional",
@@ -95,11 +226,35 @@
    "metalico": 0.0
   },
   {
+   "nombre": "Medallon_foto_NO",
+   "color_lineal": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "rugosidad": 0.9,
+   "metalico": 0.0,
+   "textura_color": "medallon_NO_foto.png",
+   "sin_repetir": true
+  },
+  {
+   "nombre": "Medallon_foto_SO",
+   "color_lineal": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "rugosidad": 0.9,
+   "metalico": 0.0,
+   "textura_color": "medallon_SO_foto.png",
+   "sin_repetir": true
+  },
+  {
    "nombre": "Provisional_cubierta",
    "color_lineal": [
-    0.66464,
-    0.42643,
-    0.29871
+    0.66498,
+    0.42779,
+    0.2998
    ],
    "rugosidad": 0.9,
    "metalico": 0.0
@@ -125,602 +280,1199 @@
    "metalico": 0.0
   },
   {
-   "nombre": "Vidrio_azul_provisional",
+   "nombre": "Puerta_foto_NO",
    "color_lineal": [
-    0.012,
-    0.03,
-    0.085
+    0.8,
+    0.8,
+    0.8
    ],
-   "rugosidad": 0.6,
-   "metalico": 0.0
+   "rugosidad": 0.75,
+   "metalico": 0.0,
+   "textura_color": "puerta_NO_foto.png",
+   "sin_repetir": true
   },
   {
-   "nombre": "Vidrio_oscuro_provisional",
+   "nombre": "Puerta_foto_SO",
    "color_lineal": [
-    0.006,
-    0.007,
-    0.009
+    0.8,
+    0.8,
+    0.8
    ],
-   "rugosidad": 0.6,
-   "metalico": 0.0
+   "rugosidad": 0.75,
+   "metalico": 0.0,
+   "textura_color": "puerta_SO_foto.png",
+   "sin_repetir": true
+  },
+  {
+   "nombre": "Roseton_foto_SO",
+   "color_lineal": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "rugosidad": 0.5,
+   "metalico": 0.0,
+   "textura_color": "roseton_SO_foto.png",
+   "sin_repetir": true
+  },
+  {
+   "nombre": "Teja_arabe_cubiertas",
+   "color_lineal": [
+    0.8,
+    0.8,
+    0.8
+   ],
+   "rugosidad": 0.85,
+   "metalico": 0.0,
+   "textura_color": "teja_arabe_color.png",
+   "sin_repetir": false,
+   "textura_normal": "teja_arabe_normal.png"
   }
  ],
  "material_por_objeto": [
   {
    "objeto": "Terreno_interpolado",
-   "material": "Provisional_terreno"
+   "materiales": [
+    "Provisional_terreno"
+   ]
   },
   {
    "objeto": "Concatedral_fachadas",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_nave",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta"
+   ]
   },
   {
    "objeto": "Concatedral_ala_norte",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Concatedral_ala_sur",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Concatedral_abside",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Concatedral_torre_fachadas",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta"
+   ]
   },
   {
    "objeto": "Concatedral_contrafuerte_9",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_contrafuerte_portada",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_cuerpo_portada",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_cuerpo_escalonado",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_interior_provisional",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_contrafuerte_torre",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_cubierta_cierre_provisional",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Concatedral_contrafuerte_B2_pie",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_contrafuerte_B2_repisa",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_contrafuerte_B3_bajo",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_contrafuerte_B3_alto",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_contrafuerte_B4",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_remate_B1",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_remate_B1_losa",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_remate_B2",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_remate_B2_losa",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_remate_B3",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_remate_B3_losa",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_remate_B4",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_remate_B4_losa",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_remate_B5",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_remate_B5_losa",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_portada_puertas",
-   "material": "Madera_provisional"
+   "materiales": [
+    "Puerta_foto_NO"
+   ]
   },
   {
    "objeto": "Concatedral_portada_rebaje",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_portada_cornisa",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_portada_canecillos",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_portada_peldanos",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_ventana_W1",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_ventana_W1_vidrio",
-   "material": "Vidrio_azul_provisional"
+   "materiales": [
+    "Cristalera_W1_NO"
+   ]
   },
   {
    "objeto": "Concatedral_ventana_W2",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_ventana_W2_vidrio",
-   "material": "Vidrio_azul_provisional"
+   "materiales": [
+    "Cristalera_W2_NO"
+   ]
   },
   {
    "objeto": "Concatedral_ventana_W3",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_ventana_W3_vidrio",
-   "material": "Vidrio_azul_provisional"
+   "materiales": [
+    "Cristalera_W3_NO"
+   ]
   },
   {
    "objeto": "Concatedral_ventana_W4",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_ventana_W4_vidrio",
-   "material": "Vidrio_oscuro_provisional"
+   "materiales": [
+    "Cristalera_W4_NO"
+   ]
   },
   {
    "objeto": "Concatedral_torre_campanario_NO",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_campanario_NO_fondo",
-   "material": "Hueco_oscuro_provisional"
+   "materiales": [
+    "Hueco_oscuro_provisional"
+   ]
   },
   {
    "objeto": "Concatedral_torre_ventana_ciega",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_ventana_ciega_fondo",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Cristalera_torre_NO"
+   ]
   },
   {
    "objeto": "Concatedral_torre_ventanuco_alto",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_ventanuco_alto_fondo",
-   "material": "Hueco_oscuro_provisional"
+   "materiales": [
+    "Hueco_oscuro_provisional"
+   ]
   },
   {
    "objeto": "Concatedral_torre_ventanuco_medallon",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_ventanuco_medallon_fondo",
-   "material": "Hueco_oscuro_provisional"
+   "materiales": [
+    "Hueco_oscuro_provisional"
+   ]
   },
   {
    "objeto": "Concatedral_torre_ventanuco_bajo",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_ventanuco_bajo_fondo",
-   "material": "Hueco_oscuro_provisional"
+   "materiales": [
+    "Hueco_oscuro_provisional"
+   ]
   },
   {
    "objeto": "Concatedral_torre_balaustrada_NO",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_balaustrada_NO_fondo",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_campanario_NE1",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_campanario_NE1_fondo",
-   "material": "Hueco_oscuro_provisional"
+   "materiales": [
+    "Hueco_oscuro_provisional"
+   ]
   },
   {
    "objeto": "Concatedral_torre_balaustrada_NE1",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_balaustrada_NE1_fondo",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_campanario_NE2",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_campanario_NE2_fondo",
-   "material": "Hueco_oscuro_provisional"
+   "materiales": [
+    "Hueco_oscuro_provisional"
+   ]
   },
   {
    "objeto": "Concatedral_torre_balaustrada_NE2",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_balaustrada_NE2_fondo",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_balaustres",
-   "material": "Granito_liso_provisional"
+   "materiales": [
+    "Granito_liso_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_medallon",
-   "material": "Granito_liso_provisional"
+   "materiales": [
+    "Medallon_foto_NO"
+   ]
   },
   {
    "objeto": "Concatedral_torre_campana",
-   "material": "Bronce_provisional"
+   "materiales": [
+    "Bronce_provisional"
+   ]
   },
   {
    "objeto": "Concatedral_torre_yugo",
-   "material": "Madera_provisional"
+   "materiales": [
+    "Madera_provisional"
+   ]
   },
   {
    "objeto": "Concatedral_torre_cornisa_1",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_cornisa_2",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_cornisa_3",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_pinaculo_1",
-   "material": "Granito_liso_provisional"
+   "materiales": [
+    "Granito_liso_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_pinaculo_2",
-   "material": "Granito_liso_provisional"
+   "materiales": [
+    "Granito_liso_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_pinaculo_3",
-   "material": "Granito_liso_provisional"
+   "materiales": [
+    "Granito_liso_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_torre_pinaculo_4",
-   "material": "Granito_liso_provisional"
+   "materiales": [
+    "Granito_liso_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_SO_muro",
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_SO_muro_inclinado",
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_SO_alero_moldura",
+   "materiales": [
+    "Granito_liso_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_SO_alero_tejas",
+   "materiales": [
+    "Teja_arabe_cubiertas"
+   ]
+  },
+  {
+   "objeto": "Concatedral_SO_roseton",
+   "materiales": [
+    "Granito_liso_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_SO_roseton_molduras",
+   "materiales": [
+    "Granito_liso_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_SO_roseton_vidrio",
+   "materiales": [
+    "Roseton_foto_SO"
+   ]
+  },
+  {
+   "objeto": "Concatedral_SO_portada_cuerpo",
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_SO_portada_arquivoltas",
+   "materiales": [
+    "Granito_liso_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_SO_portada_boceles",
+   "materiales": [
+    "Granito_liso_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_SO_portada_basas_capiteles",
+   "materiales": [
+    "Granito_liso_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_SO_portada_puerta",
+   "materiales": [
+    "Puerta_foto_SO"
+   ]
+  },
+  {
+   "objeto": "Concatedral_SO_portada_cornisa",
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_SO_portada_canecillos",
+   "materiales": [
+    "Granito_liso_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_SO_portada_escudo",
+   "materiales": [
+    "Granito_liso_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_SO_contrafuerte_torre",
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_SO_contrafuerte_portada",
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_campanario",
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_campanario_fondo",
+   "materiales": [
+    "Hueco_oscuro_provisional"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_balaustrada",
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_balaustrada_fondo",
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_ventana_alta",
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_ventana_alta_fondo",
+   "materiales": [
+    "Hueco_oscuro_provisional"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_ventana_alta_reja",
+   "materiales": [
+    "Hierro_provisional"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_ventana_baja",
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_ventana_baja_fondo",
+   "materiales": [
+    "Hueco_oscuro_provisional"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_ventana_baja_reja",
+   "materiales": [
+    "Hierro_provisional"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_saetera_1",
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_saetera_1_fondo",
+   "materiales": [
+    "Hueco_oscuro_provisional"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_saetera_2",
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_saetera_2_fondo",
+   "materiales": [
+    "Hueco_oscuro_provisional"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_saetera_3",
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_saetera_3_fondo",
+   "materiales": [
+    "Hueco_oscuro_provisional"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_saetera_4",
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_saetera_4_fondo",
+   "materiales": [
+    "Hueco_oscuro_provisional"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_saetera_5",
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_saetera_5_fondo",
+   "materiales": [
+    "Hueco_oscuro_provisional"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_pano",
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_balaustres",
+   "materiales": [
+    "Granito_liso_concatedral"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_medallon",
+   "materiales": [
+    "Medallon_foto_SO"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_campana",
+   "materiales": [
+    "Bronce_provisional"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_yugo",
+   "materiales": [
+    "Madera_provisional"
+   ]
+  },
+  {
+   "objeto": "Concatedral_torre_SO_moldura",
+   "materiales": [
+    "Granito_liso_concatedral"
+   ]
   },
   {
    "objeto": "Edificio_01_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_01_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_02_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta"
+   ]
   },
   {
    "objeto": "Edificio_02_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_03_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_03_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_04_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_04_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_05_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_05_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_06_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_06_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_07_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_07_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_08_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta"
+   ]
   },
   {
    "objeto": "Edificio_08_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_10_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_10_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_11_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_11_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_12_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_12_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_13_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta"
+   ]
   },
   {
    "objeto": "Edificio_13_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_14_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta"
+   ]
   },
   {
    "objeto": "Edificio_14_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_15_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_15_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_16_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_16_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_17_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta"
+   ]
   },
   {
    "objeto": "Edificio_17_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_18_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_18_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_19_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta"
+   ]
   },
   {
    "objeto": "Edificio_19_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_20_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_20_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_21_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_21_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_22_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_22_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_23_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_23_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_24_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_24_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_25_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_25_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_26_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_26_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_27_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_27_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_28_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_28_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_29_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_29_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_30_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_30_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_31_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_31_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_32_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_32_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_33_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_33_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Edificio_34_cubierta",
-   "material": "Provisional_cubierta"
+   "materiales": [
+    "Provisional_cubierta",
+    "Teja_arabe_cubiertas"
+   ]
   },
   {
    "objeto": "Edificio_34_fachadas",
-   "material": "Provisional_fachada_v03"
+   "materiales": [
+    "Provisional_fachada_v03"
+   ]
   },
   {
    "objeto": "Concatedral_contrafuerte_5",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_contrafuerte_6",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_contrafuerte_7",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   },
   {
    "objeto": "Concatedral_contrafuerte_8",
-   "material": "Granito_silleria_concatedral"
+   "materiales": [
+    "Granito_silleria_concatedral"
+   ]
   }
  ],
  "controles": [
@@ -967,7 +1719,9 @@
  "avisos": [
   "geometria provisional fuera de la fachada noroeste",
   "colisiones sin simplificar y sin LOD",
-  "textura de silleria generada, no es la piedra real",
+  "silleria: despiece generado con grano de fotos propias; intervenciones 7 y 8 sin revisar",
+  "teja arabe (intervencion 9) generada por codigo, sin revisar; solo textura",
+  "fachada suroeste (intervencion 10) sin revisar; vuelos y profundidades estimados",
   "licencia de la cartografia municipal sin comprobar"
  ]
 }

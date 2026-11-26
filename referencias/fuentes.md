@@ -64,3 +64,19 @@ Licencia registrada allí: CC BY 4.0, pendiente de confirmar en la ficha de cada
 No se copió `Santa María.jpg` de la misma carpeta: no tiene datos de cámara y parece una copia reducida de la foto de Commons de Jesusccastillo (CC BY-SA 3.0 ES).
 
 Texturas del maestro desde la intervención 7 (`texturas/concatedral/*_foto*.png`): derivadas de estas fotos (`herramientas/texturas_foto.py`). El despiece de la sillería es generado; el tono medio sigue siendo el ajustado a ojo, porque las fotos son nocturnas. Sustituyen a `silleria_dorada_*.png`, que se conservan en disco.
+
+## Teja de cubierta (intervención 9)
+
+`texturas/cubiertas/teja_arabe_*.png`: generadas por código (`herramientas/i9_tejas.py`), sin fotografías. Jorge indicó como modelo visual una imagen de producto (https://media.adeo.com/media/1826893/media.png), de autor y licencia sin comprobar: no se guardó ni se usó como textura. Tamaño de teja (24 cm entre canales, 36 cm vistos) y color, supuestos.
+
+## Fachada suroeste (intervención 10)
+
+Medidas sobre las fotos propias 184905, 184908 y 184911. Texturas recortadas de ellas: `texturas/concatedral/puerta_SO_foto.png` y `roseton_SO_foto.png` (184908) y `medallon_SO_foto.png` (184905). Con esto dejan de estar sin uso en la tabla anterior.
+
+## Cristalera de la torre (intervención 11)
+
+`texturas/concatedral/cristalera_torre_color.png`: generada por código (`herramientas/i11_cristalera_torre.py`), sin fotografías. El diseño es inventado.
+
+## Cristaleras de la nave noroeste (intervención 12)
+
+`texturas/concatedral/cristalera_W1_color.png` a `_W4_color.png`: generadas por código (`herramientas/i12_cristaleras_nave.py`), sin fotografías. Diseño inventado.

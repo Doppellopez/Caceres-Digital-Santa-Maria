@@ -1,0 +1,39 @@
+{
+  "blender": "5.2.2 LTS",
+  "origen": "blender/santa_maria.blend",
+  "altura_ojos_m": 1.65,
+  "resolucion": [
+    2000,
+    1500
+  ],
+  "muestras": 64,
+  "sensor_mm": 36.0,
+  "vistas": {
+    "E": {
+      "posicion": [
+        70.403,
+        -1.981,
+        2.039
+      ],
+      "rumbo_grados": 273.4,
+      "focal_mm": 29.8,
+      "desplazamiento_y": 0.1431,
+      "iglesia_a_la_vista": 0.016,
+      "cabe_entera": true,
+      "cielo_libre": 0.896
+    },
+    "SE": {
+      "posicion": [
+        73.781,
+        -42.155,
+        -2.464
+      ],
+      "rumbo_grados": 310.1,
+      "focal_mm": 35.0,
+      "desplazamiento_y": 0.1408,
+      "iglesia_a_la_vista": 0.01,
+      "cabe_entera": true,
+      "cielo_libre": 0.229
+    }
+  }
+}

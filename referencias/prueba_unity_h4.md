@@ -34,3 +34,36 @@ Salida: `exports/unity/` (FBX, texturas, `manifiesto.json`) y `renders/h4_unity/
 ## No probado
 
 Modo Play, personaje y cámara de Qazrix, rendimiento, LOD, colisiones simplificadas (se usan `MeshCollider` sobre las 144 mallas), compilaciones y materiales definitivos de lo provisional (color plano). La iluminación es la de la prueba, no forma parte del entregable.
+
+## Reexportación con las intervenciones 7 y 8 (2026-11-26)
+
+Pedida por Jorge ("modelo compatible con Unity"). Mismo proyecto vacío y mismos scripts.
+
+- **Paquete para importar:** `exports/unity/SantaMaria.unitypackage` (19 recursos: prefab `SantaMaria.prefab`, FBX, texturas y materiales URP; sin dependencias fuera del paquete). Necesita un proyecto con URP. No incluye ajustes del proyecto ni scripts. No se ha importado en otro proyecto, tampoco en Qazrix.
+- 144 de 144 mallas, 83.000 triángulos (tras la intervención 8; 82.784 antes), error de escala y ejes 0 m, materiales asignados a los 144 objetos, ambos recorridos completados.
+- Cubiertas v0.3 de la concatedral: sus caras hacia abajo (nave 2, ala norte 16, ala sur 13, ábside 13) se voltean **solo en la exportación**; el maestro sigue sin corregir. En la vista general los rayos que dan en caras vistas por detrás bajan del 7,3 % al 2,7 %; casi todos los restantes son de otros edificios.
+- Puerta y medallón se importan sin repetición de textura (`Clamp`).
+- Siguen sin probar: modo Play, personaje de Qazrix, rendimiento, LOD y colisiones simplificadas (el prefab lleva un `MeshCollider` por malla).
+
+## Reexportación con la intervención 9, teja (2026-11-26)
+
+- La exportación y el script de Unity admiten varios materiales por malla (cubierta con teja y zona casi plana); se emparejan por nombre.
+- 144 de 144 mallas, 83.000 triángulos, error de escala y ejes 0 m, materiales asignados a los 144 objetos, ambos recorridos completados.
+- `SantaMaria.unitypackage`: 22 recursos, sin dependencias fuera del paquete.
+- En el maestro ya miran hacia arriba ábside y alas; en la exportación solo se voltean las 2 caras de la nave.
+- Vista general: 2,7 % de rayos en caras vistas por detrás, como antes.
+
+## Reexportación con la intervención 10 y recorrido a mano (2026-11-26)
+
+- 187 de 187 mallas, 94.226 triángulos, error de escala y ejes 0 m, materiales asignados a los 187 objetos, ambos recorridos completados; paquete de 29 recursos sin dependencias fuera.
+- La exportación quita las ranuras de material sin caras.
+- `Referencia_180cm` lleva `CharacterController` y `ControlTeclado.cs` (gestor de entrada clásico): W/S o flechas, A/D paso lateral, Q/E giro, Mayús correr, RePág/AvPág mirar, ratón gira la cámara (Esc lo suelta), botón izquierdo foto, V cambia de persona, R vuelve. La cámara va por defecto en los ojos de la figura, que no se ve.
+- Comprobado por script, sin modo Play: avance, retroceso y lateral 1,6 m/s, giro, choque contra la portada, giro por ratón (llamando a `Mirar`), foto de 1920 px y vuelta al inicio. **No probado con teclado y ratón reales.**
+
+## Reexportación con la intervención 11, cristalera (2026-11-26)
+
+- 187 de 187 mallas, 187 objetos con material, error de escala y ejes 0 m, recorridos y control por script correctos; paquete de 31 recursos sin dependencias fuera.
+
+## Reexportación con la intervención 12, cristaleras de la nave (2026-11-26)
+
+- 187 de 187 mallas, 187 objetos con material, error de escala y ejes 0 m, recorridos correctos; paquete de 37 recursos sin dependencias fuera.

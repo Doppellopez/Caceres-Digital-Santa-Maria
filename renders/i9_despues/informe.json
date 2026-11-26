@@ -1,0 +1,381 @@
+{
+  "pendiente_grados": [
+    5.0,
+    90.0
+  ],
+  "textura_m": [
+    3.84,
+    3.5999999999999996
+  ],
+  "textura_px": 2048,
+  "objetos": {
+    "Concatedral_abside": {
+      "m2": {
+        "teja": 104.7,
+        "plana": 0.0,
+        "empinada": 0.0
+      },
+      "faldones": 5,
+      "caras_volteadas": 13
+    },
+    "Concatedral_ala_norte": {
+      "m2": {
+        "teja": 270.6,
+        "plana": 0.0,
+        "empinada": 0.0
+      },
+      "faldones": 1,
+      "caras_volteadas": 16
+    },
+    "Concatedral_ala_sur": {
+      "m2": {
+        "teja": 239.0,
+        "plana": 0.0,
+        "empinada": 0.0
+      },
+      "faldones": 1,
+      "caras_volteadas": 13
+    },
+    "Concatedral_cubierta_cierre_provisional": {
+      "m2": {
+        "teja": 72.6,
+        "plana": 17.5,
+        "empinada": 0.0
+      },
+      "faldones": 2,
+      "caras_volteadas": 0
+    },
+    "Concatedral_nave": {
+      "m2": {
+        "teja": 0.0,
+        "plana": 285.8,
+        "empinada": 0.0
+      },
+      "faldones": 0,
+      "caras_volteadas": 0
+    },
+    "Concatedral_torre_cubierta": {
+      "m2": {
+        "teja": 0.0,
+        "plana": 60.3,
+        "empinada": 0.0
+      },
+      "faldones": 0,
+      "caras_volteadas": 0
+    },
+    "Edificio_01_cubierta": {
+      "m2": {
+        "teja": 10.8,
+        "plana": 0.0,
+        "empinada": 0.0
+      },
+      "faldones": 2,
+      "caras_volteadas": 0
+    },
+    "Edificio_02_cubierta": {
+      "m2": {
+        "teja": 0.0,
+        "plana": 10.2,
+        "empinada": 0.0
+      },
+      "faldones": 0,
+      "caras_volteadas": 0
+    },
+    "Edificio_03_cubierta": {
+      "m2": {
+        "teja": 14.4,
+        "plana": 0.0,
+        "empinada": 0.0
+      },
+      "faldones": 3,
+      "caras_volteadas": 0
+    },
+    "Edificio_04_cubierta": {
+      "m2": {
+        "teja": 92.0,
+        "plana": 0.0,
+        "empinada": 0.0
+      },
+      "faldones": 7,
+      "caras_volteadas": 0
+    },
+    "Edificio_05_cubierta": {
+      "m2": {
+        "teja": 193.0,
+        "plana": 0.0,
+        "empinada": 0.0
+      },
+      "faldones": 5,
+      "caras_volteadas": 0
+    },
+    "Edificio_06_cubierta": {
+      "m2": {
+        "teja": 150.6,
+        "plana": 0.9,
+        "empinada": 0.0
+      },
+      "faldones": 7,
+      "caras_volteadas": 0
+    },
+    "Edificio_07_cubierta": {
+      "m2": {
+        "teja": 215.2,
+        "plana": 0.0,
+        "empinada": 0.0
+      },
+      "faldones": 15,
+      "caras_volteadas": 0
+    },
+    "Edificio_08_cubierta": {
+      "m2": {
+        "teja": 0.0,
+        "plana": 134.2,
+        "empinada": 0.0
+      },
+      "faldones": 0,
+      "caras_volteadas": 0
+    },
+    "Edificio_10_cubierta": {
+      "m2": {
+        "teja": 1188.2,
+        "plana": 78.1,
+        "empinada": 0.0
+      },
+      "faldones": 20,
+      "caras_volteadas": 0
+    },
+    "Edificio_11_cubierta": {
+      "m2": {
+        "teja": 1220.2,
+        "plana": 68.1,
+        "empinada": 0.0
+      },
+      "faldones": 25,
+      "caras_volteadas": 0
+    },
+    "Edificio_12_cubierta": {
+      "m2": {
+        "teja": 1765.3,
+        "plana": 50.3,
+        "empinada": 0.0
+      },
+      "faldones": 44,
+      "caras_volteadas": 0
+    },
+    "Edificio_13_cubierta": {
+      "m2": {
+        "teja": 0.0,
+        "plana": 23.8,
+        "empinada": 0.0
+      },
+      "faldones": 0,
+      "caras_volteadas": 0
+    },
+    "Edificio_14_cubierta": {
+      "m2": {
+        "teja": 0.0,
+        "plana": 28.9,
+        "empinada": 0.0
+      },
+      "faldones": 0,
+      "caras_volteadas": 0
+    },
+    "Edificio_15_cubierta": {
+      "m2": {
+        "teja": 23.5,
+        "plana": 22.2,
+        "empinada": 0.0
+      },
+      "faldones": 1,
+      "caras_volteadas": 0
+    },
+    "Edificio_16_cubierta": {
+      "m2": {
+        "teja": 47.1,
+        "plana": 8.8,
+        "empinada": 0.0
+      },
+      "faldones": 6,
+      "caras_volteadas": 0
+    },
+    "Edificio_17_cubierta": {
+      "m2": {
+        "teja": 0.0,
+        "plana": 72.8,
+        "empinada": 0.0
+      },
+      "faldones": 0,
+      "caras_volteadas": 0
+    },
+    "Edificio_18_cubierta": {
+      "m2": {
+        "teja": 5.6,
+        "plana": 93.8,
+        "empinada": 0.0
+      },
+      "faldones": 2,
+      "caras_volteadas": 0
+    },
+    "Edificio_19_cubierta": {
+      "m2": {
+        "teja": 0.0,
+        "plana": 153.7,
+        "empinada": 0.0
+      },
+      "faldones": 0,
+      "caras_volteadas": 0
+    },
+    "Edificio_20_cubierta": {
+      "m2": {
+        "teja": 102.2,
+        "plana": 22.6,
+        "empinada": 0.0
+      },
+      "faldones": 4,
+      "caras_volteadas": 0
+    },
+    "Edificio_21_cubierta": {
+      "m2": {
+        "teja": 134.1,
+        "plana": 53.1,
+        "empinada": 0.0
+      },
+      "faldones": 5,
+      "caras_volteadas": 0
+    },
+    "Edificio_22_cubierta": {
+      "m2": {
+        "teja": 202.0,
+        "plana": 10.0,
+        "empinada": 0.0
+      },
+      "faldones": 10,
+      "caras_volteadas": 0
+    },
+    "Edificio_23_cubierta": {
+      "m2": {
+        "teja": 303.3,
+        "plana": 9.9,
+        "empinada": 0.0
+      },
+      "faldones": 17,
+      "caras_volteadas": 0
+    },
+    "Edificio_24_cubierta": {
+      "m2": {
+        "teja": 142.6,
+        "plana": 111.7,
+        "empinada": 0.0
+      },
+      "faldones": 6,
+      "caras_volteadas": 0
+    },
+    "Edificio_25_cubierta": {
+      "m2": {
+        "teja": 288.1,
+        "plana": 121.1,
+        "empinada": 0.0
+      },
+      "faldones": 13,
+      "caras_volteadas": 0
+    },
+    "Edificio_26_cubierta": {
+      "m2": {
+        "teja": 221.6,
+        "plana": 87.2,
+        "empinada": 0.0
+      },
+      "faldones": 6,
+      "caras_volteadas": 0
+    },
+    "Edificio_27_cubierta": {
+      "m2": {
+        "teja": 139.9,
+        "plana": 246.3,
+        "empinada": 0.0
+      },
+      "faldones": 3,
+      "caras_volteadas": 0
+    },
+    "Edificio_28_cubierta": {
+      "m2": {
+        "teja": 362.4,
+        "plana": 82.2,
+        "empinada": 0.0
+      },
+      "faldones": 24,
+      "caras_volteadas": 0
+    },
+    "Edificio_29_cubierta": {
+      "m2": {
+        "teja": 530.7,
+        "plana": 44.9,
+        "empinada": 0.0
+      },
+      "faldones": 13,
+      "caras_volteadas": 0
+    },
+    "Edificio_30_cubierta": {
+      "m2": {
+        "teja": 602.1,
+        "plana": 108.3,
+        "empinada": 0.0
+      },
+      "faldones": 37,
+      "caras_volteadas": 0
+    },
+    "Edificio_31_cubierta": {
+      "m2": {
+        "teja": 1290.7,
+        "plana": 46.0,
+        "empinada": 0.0
+      },
+      "faldones": 41,
+      "caras_volteadas": 0
+    },
+    "Edificio_32_cubierta": {
+      "m2": {
+        "teja": 715.9,
+        "plana": 248.4,
+        "empinada": 0.0
+      },
+      "faldones": 18,
+      "caras_volteadas": 0
+    },
+    "Edificio_33_cubierta": {
+      "m2": {
+        "teja": 966.4,
+        "plana": 136.8,
+        "empinada": 0.0
+      },
+      "faldones": 25,
+      "caras_volteadas": 0
+    },
+    "Edificio_34_cubierta": {
+      "m2": {
+        "teja": 1748.0,
+        "plana": 16.9,
+        "empinada": 0.0
+      },
+      "faldones": 43,
+      "caras_volteadas": 0
+    }
+  },
+  "total_m2": {
+    "teja": 13362.8,
+    "plana": 2454.8,
+    "empinada": 0.0
+  },
+  "cubiertas_con_teja": 31,
+  "cubiertas_sin_teja": [
+    "Concatedral_nave",
+    "Concatedral_torre_cubierta",
+    "Edificio_02_cubierta",
+    "Edificio_08_cubierta",
+    "Edificio_13_cubierta",
+    "Edificio_14_cubierta",
+    "Edificio_17_cubierta",
+    "Edificio_19_cubierta"
+  ],
+  "vertices_modificados": 0
+}

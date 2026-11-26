@@ -1,5 +1,6 @@
 // H4 (prueba): importa la exportacion de Santa Maria en un proyecto vacio y la comprueba.
 // Herramienta de editor, sin logica de juego. La lanza herramientas/h4_probar_unity.ps1.
+// En la escena de prueba deja la figura de 1,80 m manejable (ControlTeclado.cs).
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -16,8 +17,8 @@ public static class PruebaSantaMaria
 {
     const string Raiz = "Assets/SantaMaria";
 
-    [Serializable] public class Material_ { public string nombre; public float[] color_lineal; public float rugosidad; public float metalico; public string textura_color; public string textura_normal; }
-    [Serializable] public class Asignacion { public string objeto; public string material; }
+    [Serializable] public class Material_ { public string nombre; public float[] color_lineal; public float rugosidad; public float metalico; public string textura_color; public string textura_normal; public bool sin_repetir; }
+    [Serializable] public class Asignacion { public string objeto; public string[] materiales; }
     [Serializable] public class Control { public string objeto; public float[] min; public float[] max; }
     [Serializable] public class Punto { public float[] p; }
     [Serializable] public class Recorrido { public string nombre; public float meta_cota; public Punto[] puntos; }
@@ -30,6 +31,28 @@ public static class PruebaSantaMaria
     static void Anota(string clave, string valor) { informe.AppendLine(clave + " | " + valor); }
     static string F(float v) { return v.ToString("0.###", Inv); }
     static string F(Vector3 v) { return "(" + F(v.x) + ", " + F(v.y) + ", " + F(v.z) + ")"; }
+
+    // Prefab con materiales y colisiones, y paquete para importarlo en otro proyecto.
+    static void Empaquetar(Manifiesto man, GameObject modelo)
+    {
+        string prefab = Raiz + "/SantaMaria.prefab";
+        PrefabUtility.SaveAsPrefabAssetAndConnect(modelo, prefab, InteractionMode.AutomatedAction);
+        AssetDatabase.SaveAssets();
+        var rutas = new List<string> { prefab, Raiz + "/santa_maria.fbx" };
+        foreach (var m in man.materiales)
+        {
+            rutas.Add(Raiz + "/Materiales/" + m.nombre + ".mat");
+            foreach (var t in new[] { m.textura_color, m.textura_normal })
+                if (!string.IsNullOrEmpty(t)) rutas.Add(Raiz + "/Texturas/" + t);
+        }
+        var lista = rutas.Distinct().ToArray();
+        var paquete = Environment.GetEnvironmentVariable("SANTAMARIA_PAQUETE");
+        AssetDatabase.ExportPackage(lista, paquete, ExportPackageOptions.Default);
+        var fuera = AssetDatabase.GetDependencies(prefab, true)
+            .Where(r => r.StartsWith("Assets/") && !lista.Contains(r)).ToArray();
+        Anota("paquete", lista.Length + " recursos, " + new FileInfo(paquete).Length + " bytes; dependencias fuera del paquete: " +
+            (fuera.Length == 0 ? "ninguna" : string.Join(", ", fuera)));
+    }
 
     // Blender (X este, Y norte, Z arriba) -> Unity (X este, Y arriba, Z norte).
     static Vector3 U(float[] b) { return new Vector3(b[0], b[2], b[1]); }
@@ -60,15 +83,17 @@ public static class PruebaSantaMaria
             foreach (var r in renders)
                 r.gameObject.AddComponent<MeshCollider>().sharedMesh = r.GetComponent<MeshFilter>().sharedMesh;
             Physics.SyncTransforms();
+            Empaquetar(man, modelo);
             Iluminar(man);
             var camara = new GameObject("CamaraPrueba").AddComponent<Camera>();
             CarasInvisibles(man, camara);
             Suelo();
             Recorridos(man);
-            Persona(man);
+            var control = Persona(man, camara);
             Capturar(camara, man.camaras[0], salida);   // pasada de calentamiento, se sobrescribe
             foreach (var c in man.camaras) Capturar(camara, c, salida);
             CapturarPersona(camara, man, salida);
+            ProbarControl(man, control, camara);
             EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene(), Raiz + "/Prueba.unity");
             AssetDatabase.SaveAssets();
             Anota("fin", "correcto");
@@ -125,7 +150,7 @@ public static class PruebaSantaMaria
                 var t = (TextureImporter)AssetImporter.GetAtPath(Raiz + "/Texturas/" + par.Item1);
                 t.textureType = par.Item2 ? TextureImporterType.NormalMap : TextureImporterType.Default;
                 t.sRGBTexture = !par.Item2;
-                t.wrapMode = TextureWrapMode.Repeat;
+                t.wrapMode = mat.sin_repetir ? TextureWrapMode.Clamp : TextureWrapMode.Repeat;
                 t.maxTextureSize = 2048;
                 t.anisoLevel = 8;
                 t.SaveAndReimport();
@@ -172,13 +197,18 @@ public static class PruebaSantaMaria
             EditorUtility.SetDirty(m);
             creados[d.nombre] = m;
         }
-        var porObjeto = man.material_por_objeto.ToDictionary(a => a.objeto, a => a.material);
+        var porObjeto = man.material_por_objeto.ToDictionary(a => a.objeto, a => a.materiales);
         var sinNombre = new List<string>();
         foreach (var r in renders)
         {
-            string mat;
-            if (porObjeto.TryGetValue(r.gameObject.name, out mat)) r.sharedMaterial = creados[mat];
-            else sinNombre.Add(r.gameObject.name);
+            string[] nombres;
+            if (!porObjeto.TryGetValue(r.gameObject.name, out nombres)) { sinNombre.Add(r.gameObject.name); continue; }
+            // Se empareja por nombre: el orden de las submallas no tiene por que ser el de Blender.
+            var importados = r.sharedMaterials.Select(m => m ? m.name : "").ToArray();
+            if (importados.Length != nombres.Length || importados.Any(n => !nombres.Contains(n)))
+                throw new Exception(r.gameObject.name + ": materiales importados " + string.Join(", ", importados) +
+                    "; esperados " + string.Join(", ", nombres));
+            r.sharedMaterials = importados.Select(n => creados[n]).ToArray();
         }
         Anota("materiales_asignados", (renders.Length - sinNombre.Count) + " objetos; sin correspondencia de nombre: " +
             (sinNombre.Count == 0 ? "ninguno" : string.Join(", ", sinNombre)));
@@ -324,19 +354,81 @@ public static class PruebaSantaMaria
         }
     }
 
-    // Figura de 1,80 m ante la portada, solo para juzgar la escala.
-    static void Persona(Manifiesto man)
+    // Figura de 1,80 m ante la portada: referencia de escala y personaje de recorrido.
+    static ControlTeclado Persona(Manifiesto man, Camera camara)
     {
         var rec = man.recorridos[0];
-        var figura = GameObject.CreatePrimitive(PrimitiveType.Capsule);
-        figura.name = "Referencia_180cm";
-        UnityEngine.Object.DestroyImmediate(figura.GetComponent<Collider>());
-        figura.transform.localScale = new Vector3(0.55f, 0.9f, 0.55f);
-        figura.transform.position = U(rec.puntos[1].p) + Vector3.up * 0.9f;
+        var figura = new GameObject("Referencia_180cm");   // origen en los pies
+        figura.transform.position = U(rec.puntos[1].p) + Vector3.up * 0.05f;
+        var haciaPuerta = U(rec.puntos[2].p) - U(rec.puntos[1].p);
+        haciaPuerta.y = 0f;
+        figura.transform.rotation = Quaternion.LookRotation(haciaPuerta.normalized);
         var m = new Material(Shader.Find("Universal Render Pipeline/Lit"));
         m.SetColor("_BaseColor", new Color(0.75f, 0.12f, 0.08f));
         AssetDatabase.CreateAsset(m, Raiz + "/Materiales/Referencia.mat");
-        figura.GetComponent<MeshRenderer>().sharedMaterial = m;
+        Pieza(figura, PrimitiveType.Capsule, "Cuerpo", new Vector3(0f, 0.9f, 0f), new Vector3(0.55f, 0.9f, 0.55f), m);
+        Pieza(figura, PrimitiveType.Cube, "Frente", new Vector3(0f, 1.55f, 0.26f), new Vector3(0.3f, 0.09f, 0.08f), m);
+        var cc = figura.AddComponent<CharacterController>();
+        cc.height = 1.8f; cc.radius = 0.3f; cc.center = new Vector3(0f, 0.9f, 0f);
+        cc.stepOffset = 0.3f; cc.slopeLimit = 45f; cc.skinWidth = 0.03f; cc.minMoveDistance = 0f;
+        var control = figura.AddComponent<ControlTeclado>();
+        camara.tag = "MainCamera";
+        control.camara = camara.transform;
+        return control;
+    }
+
+    static void Pieza(GameObject padre, PrimitiveType tipo, string nombre, Vector3 posicion, Vector3 escala, Material m)
+    {
+        var p = GameObject.CreatePrimitive(tipo);
+        p.name = nombre;
+        UnityEngine.Object.DestroyImmediate(p.GetComponent<Collider>());
+        p.transform.SetParent(padre.transform, false);
+        p.transform.localPosition = posicion;
+        p.transform.localScale = escala;
+        p.GetComponent<MeshRenderer>().sharedMaterial = m;
+    }
+
+    // Mueve la figura como lo harian las teclas y el raton (sin modo Play) y la deja en el inicio.
+    static void ProbarControl(Manifiesto man, ControlTeclado control, Camera camara)
+    {
+        var t = control.transform;
+        Physics.SyncTransforms();
+        control.Preparar();
+        var p0 = t.position; var frente = t.forward;
+        System.Action<float, float, float, float> pasos = (avance, lateral, vuelta, segundos) =>
+        { for (int i = 0; i < Mathf.RoundToInt(segundos / 0.02f); i++) control.Paso(avance, lateral, vuelta, 0f, false, 0.02f); };
+        pasos(0f, 0f, 0f, 0.5f);
+        pasos(1f, 0f, 0f, 1f);
+        Anota("control_avanzar", "1 s adelante: " + F(Vector3.Dot(t.position - p0, frente)) + " m");
+        pasos(1f, 0f, 0f, 8f);
+        var puerta = U(man.recorridos[0].puntos[2].p);
+        Anota("control_choque", "9 s contra la portada: queda en " + F(t.position) + ", a " + F(Vector3.Dot(t.position - puerta, frente)) +
+            " m del punto ante la puerta (negativo = no lo ha rebasado), cota " + F(t.position.y));
+        var antes = t.position; pasos(-1f, 0f, 0f, 1f);
+        Anota("control_retroceder", "1 s atras: " + F(Vector3.Dot(t.position - antes, frente)) + " m");
+        antes = t.position; pasos(0f, 1f, 0f, 1f);
+        Anota("control_lateral", "1 s a la derecha: " + F(Vector3.Dot(t.position - antes, t.right)) + " m");
+        float rumbo = t.eulerAngles.y; pasos(0f, 0f, 1f, 0.9f);
+        Anota("control_giro", "0,9 s girando: " + F(Mathf.DeltaAngle(rumbo, t.eulerAngles.y)) + " grados");
+        control.Volver();
+        rumbo = t.eulerAngles.y;
+        control.Mirar(10f, 8f); control.ColocarCamara();
+        Anota("control_raton", "raton (10, 8): camara gira " + F(Mathf.DeltaAngle(rumbo, camara.transform.eulerAngles.y)) +
+            " grados y se inclina " + F(-Mathf.DeltaAngle(0f, camara.transform.eulerAngles.x)) + " grados hacia arriba");
+        control.Volver();
+        camara.ResetAspect();
+        camara.fieldOfView = 60f;
+        control.ColocarCamara();
+        var foto = control.HacerFoto(Path.Combine(Path.GetTempPath(), "santamaria_foto_prueba"));
+        Anota("control_foto", Path.GetFileName(foto) + ", " + new FileInfo(foto).Length + " bytes");
+        File.Copy(foto, Path.Combine(Environment.GetEnvironmentVariable("SANTAMARIA_SALIDA"), "unity_foto_control.png"), true);
+        File.Delete(foto);
+        Anota("control_volver", "a " + F(Vector3.Distance(t.position, p0)) + " m del inicio");
+        camara.ResetAspect();
+        camara.fieldOfView = 60f;
+        control.ColocarCamara();
+        // En la vista Scene la figura se sigue viendo; en modo Play la camara va en sus ojos y la oculta.
+        foreach (var r in control.GetComponentsInChildren<Renderer>()) r.enabled = true;
     }
 
     static void Capturar(Camera cam, Camara c, string salida)

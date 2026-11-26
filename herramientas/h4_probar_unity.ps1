@@ -10,12 +10,13 @@ $raiz = Split-Path -Parent $PSScriptRoot
 $salida = Join-Path $raiz "renders\h4_unity"
 if (Test-Path (Join-Path $Proyecto "Temp\UnityLockfile")) { throw "El proyecto de prueba esta abierto en Unity: cierralo." }
 
-foreach ($c in "Assets\SantaMaria\Texturas", "Assets\Editor", "Packages", "ProjectSettings") {
+foreach ($c in "Assets\SantaMaria\Texturas", "Assets\SantaMaria\Recorrido", "Assets\Editor", "Packages", "ProjectSettings") {
     New-Item -ItemType Directory -Force (Join-Path $Proyecto $c) | Out-Null
 }
 Copy-Item "$raiz\exports\unity\santa_maria.fbx", "$raiz\exports\unity\manifiesto.json" "$Proyecto\Assets\SantaMaria\" -Force
 Copy-Item "$raiz\exports\unity\Texturas\*.png" "$Proyecto\Assets\SantaMaria\Texturas\" -Force
 Copy-Item "$PSScriptRoot\unity\PruebaSantaMaria.cs" "$Proyecto\Assets\Editor\" -Force
+Copy-Item "$PSScriptRoot\unity\ControlTeclado.cs" "$Proyecto\Assets\SantaMaria\Recorrido\" -Force
 $paquetes = "$Proyecto\Packages\manifest.json"
 if (-not (Test-Path $paquetes)) {
     $json = @'
@@ -38,6 +39,7 @@ if (-not (Test-Path $paquetes)) {
 New-Item -ItemType Directory -Force $salida | Out-Null
 Remove-Item "$salida\informe_unity.txt" -ErrorAction SilentlyContinue
 $env:SANTAMARIA_SALIDA = $salida
+$env:SANTAMARIA_PAQUETE = Join-Path $raiz "exports/unity/SantaMaria.unitypackage"
 $registro = Join-Path $Proyecto "prueba_unity.log"
 # Sin -nographics: las capturas necesitan la tarjeta grafica.
 $p = Start-Process -FilePath $Unity -PassThru -ArgumentList @(

@@ -1,8 +1,10 @@
 """H4 (prueba): exporta el maestro a FBX para Unity, con texturas y manifiesto.
 
 Abre blender/santa_maria.blend y NO lo guarda. Sale a exports/unity/:
-santa_maria.fbx, Texturas/ y manifiesto.json. Los materiales por color de vertice
-de v0.3 se sustituyen, solo en la exportacion, por tres colores planos.
+santa_maria.fbx, Texturas/ y manifiesto.json. Solo en la exportacion, los
+materiales por color de vertice de v0.3 se sustituyen por tres colores planos y
+se vuelven hacia arriba las cubiertas de la concatedral que miran hacia abajo.
+h4_probar_unity.ps1 genera despues SantaMaria.unitypackage.
 
 Uso (desde la raiz del proyecto):
     blender -b --factory-startup -P herramientas/h4_exportar_unity.py
@@ -23,6 +25,8 @@ SALIDA = RAIZ / "exports" / "unity"
 FBX = SALIDA / "santa_maria.fbx"
 CONTROLES = ("Terreno_interpolado", "Concatedral_torre_pinaculo_2", "Concatedral_portada_peldanos",
              "Concatedral_ventana_W4_vidrio", "Concatedral_cuerpo_portada")
+CUBIERTAS_V03 = ("Concatedral_nave", "Concatedral_ala_norte", "Concatedral_ala_sur",
+                 "Concatedral_abside")
 CAMARAS = ("CAM_foto", "CAM_peaton_noroeste", "CAM_portada", "CAM_torre", "CAM_general")
 
 
@@ -36,18 +40,37 @@ def redondo(v, n=4):
 
 bpy.ops.wm.open_mainfile(filepath=str(BLEND))
 escena = bpy.context.scene
-assert escena.get("intervencion") == 6, "el maestro no es el aprobado en H1"
+assert escena.get("intervencion") == 12, "el maestro no es el de la intervencion 12"
 SALIDA.mkdir(parents=True, exist_ok=True)
 
 mallas = [o for o in escena.objects if o.type == "MESH" and not o.hide_render]
 excluidos = sorted(o.name for o in escena.objects if o.type == "MESH" and o.hide_render)
 
 
+# --- cubiertas v0.3 con la cara hacia abajo: Unity no las dibujaria desde arriba ---
+volteadas = {}
+for nombre in CUBIERTAS_V03:
+    o = bpy.data.objects[nombre]
+    normal_m = o.matrix_world.to_3x3().inverted_safe().transposed()
+    abajo = [p for p in o.data.polygons if (normal_m @ p.normal).z < -1e-6]
+    for p in abajo:
+        p.flip()
+    o.data.update()
+    volteadas[nombre] = len(abajo)
+
+
+# --- ranuras de material sin caras: Unity no las importa --------------------------
+for o in mallas:
+    usadas = {p.material_index for p in o.data.polygons}
+    for i in reversed(range(len(o.data.materials))):
+        if i not in usadas:
+            o.data.materials.pop(index=i)
+
+
 # --- materiales provisionales para lo que v0.3 pinta por vertice ---------------
-def categoria(o):
+def categoria(o, material):
     if o.name.startswith("Terreno"):
         return "Provisional_terreno"
-    material = o.data.materials[0] if o.data.materials else None
     if material and not material.name.startswith("DefaultMaterial"):
         return None
     if any(c in o.name for c in ("cubierta", "nave", "ala_", "abside")):
@@ -57,8 +80,8 @@ def categoria(o):
 
 sumas = {}
 for o in mallas:
-    cat = categoria(o)
-    if cat and o.data.color_attributes:
+    cats = {categoria(o, m) for m in (o.data.materials or [None])} - {None}
+    for cat in cats if o.data.color_attributes else ():
         capa = o.data.color_attributes[0]
         total = sumas.setdefault(cat, [Vector((0, 0, 0)), 0])
         for d in capa.data:
@@ -74,18 +97,20 @@ for cat, (suma, n) in sumas.items():
     b.inputs["Roughness"].default_value = 0.9
     planos[cat] = m
 for o in mallas:
-    cat = categoria(o)
-    if cat:
-        o.data.materials.clear()
-        o.data.materials.append(planos[cat])
+    if not o.data.materials:
+        o.data.materials.append(None)
+    for i, m in enumerate(o.data.materials):   # ranura a ranura: conserva la teja
+        cat = categoria(o, m)
+        if cat:
+            o.data.materials[i] = planos[cat]
 
 # --- texturas y manifiesto de materiales ----------------------------------------
 carpeta_tex = SALIDA / "Texturas"
 carpeta_tex.mkdir(exist_ok=True)
+for antigua in carpeta_tex.glob("*.png"):
+    antigua.unlink()
 materiales = {}
-for o in mallas:
-    assert len(o.data.materials) == 1, (o.name, len(o.data.materials))
-    m = o.data.materials[0]
+for m in (m for o in mallas for m in o.data.materials):
     if m.name in materiales:
         continue
     b = m.node_tree.nodes["Principled BSDF"]
@@ -98,6 +123,7 @@ for o in mallas:
             shutil.copy2(origen, carpeta_tex / origen.name)
             clave = "textura_normal" if "normal" in origen.name else "textura_color"
             datos[clave] = origen.name
+            datos["sin_repetir"] = nodo.extension == "EXTEND"
     materiales[m.name] = datos
 
 # --- controles de escala y ejes, camaras y sol ----------------------------------
@@ -176,7 +202,7 @@ bpy.ops.export_scene.fbx(
 commit = subprocess.run(["git", "-C", str(RAIZ), "log", "-1", "--format=%h"],
                         capture_output=True, text=True).stdout.strip()
 manifiesto = {
-    "version": "H1-prueba-1",
+    "version": "H1-i12-prueba-1",
     "origen": {"archivo": "blender/santa_maria.blend", "sha256": sha(BLEND),
                "commit_al_exportar": commit, "blender": bpy.app.version_string},
     "unidades": "metros",
@@ -189,8 +215,10 @@ manifiesto = {
     "mallas": len(mallas),
     "triangulos": sum(len(p.vertices) - 2 for o in mallas for p in o.data.polygons),
     "excluidos_ocultos": excluidos,
+    "caras_volteadas_solo_en_exportacion": volteadas,
     "materiales": [{"nombre": n, **d} for n, d in sorted(materiales.items())],
-    "material_por_objeto": [{"objeto": o.name, "material": o.data.materials[0].name}
+    "material_por_objeto": [{"objeto": o.name,
+                             "materiales": [m.name for m in o.data.materials]}
                             for o in mallas],
     "controles": [{"objeto": n, **d} for n, d in controles.items()],
     "recorridos": recorridos,
@@ -199,7 +227,9 @@ manifiesto = {
     "dependencias": "Unity 6000.3.6f1 con URP 17.3.0; sin paquetes de terceros",
     "avisos": ["geometria provisional fuera de la fachada noroeste",
                "colisiones sin simplificar y sin LOD",
-               "textura de silleria generada, no es la piedra real",
+               "silleria: despiece generado con grano de fotos propias; intervenciones 7 y 8 sin revisar",
+               "teja arabe (intervencion 9) generada por codigo, sin revisar; solo textura",
+               "fachada suroeste (intervencion 10) sin revisar; vuelos y profundidades estimados",
                "licencia de la cartografia municipal sin comprobar"],
 }
 (SALIDA / "manifiesto.json").write_text(json.dumps(manifiesto, indent=1, ensure_ascii=False),
@@ -207,3 +237,4 @@ manifiesto = {
 print("EXPORTADO mallas", len(mallas), "triangulos", manifiesto["triangulos"],
       "excluidos", len(excluidos), "MB", round(FBX.stat().st_size / 1e6, 2))
 print("MATERIALES", sorted(materiales))
+print("VOLTEADAS", volteadas)
